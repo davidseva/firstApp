@@ -21,14 +21,28 @@ export class EmpleadoComponent implements OnInit {
   
   habilitacionCuadro = false;
   
-  usuRegistrado=true
+  usuRegistrado=true;
+
+  textoDeRegistro = "No hay nadie registrado";
   
   getRegistroUsuario(){
-    this.usuRegistrado=true;
+    this.usuRegistrado=false;
   }
 
   llamaEmpresa(value:String){
     
+  }
+
+  setUsuarioRegistrado(event:Event){
+    
+    //alert("El usuario se acaba de registrar.")
+    this.textoDeRegistro = "El usuario se acaba de registrar.";
+    //alert(event.target); //HTMLInputElement (para luego hacer casting)
+    if((<HTMLInputElement>event.target).value == "si"){
+      this.textoDeRegistro = "El usuario se acaba de registrar.";
+    }else{
+      this.textoDeRegistro = "No hay nadie registrado.";
+    }
   }
   constructor() { }
 
