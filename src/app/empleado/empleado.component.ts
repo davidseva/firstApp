@@ -12,7 +12,11 @@ export class EmpleadoComponent implements OnInit {
   nombre = "David";
   apellido = "Seva";
   edad = 47;  
-  //Sempresa = "ADD Informática";
+  empresa = "Facebook";
+
+  // cambiaEmpresa(event:Event){ //two way binding
+  //   this.empresa=(<HTMLInputElement>event.target).value
+  // }
 
   // getEdad(){
   //   return this.edad;
